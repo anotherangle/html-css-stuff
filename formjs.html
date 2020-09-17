@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>>Form Validation using Javascript</title>
+        <style>
+            .error{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="user" action="#" onsubmit="return validateForm()">
+            <div class="row">
+                <label>Full Name</label>
+                <input type="text" name="name">
+                <div class="error" id="nameErr"></div>
+            </div>
+            <div class="row">
+                <label>Email</label>
+                <input type="text" name="email">
+                <div class="error" id="emailErr"></div>
+            </div>
+            <button type="submit" id="click">Submit</button>
+        </form>
+        <script src="validate.js" type="text/javascript"></script>
+    </body>
+</html>
