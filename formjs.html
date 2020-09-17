@@ -19,6 +19,29 @@
                 <input type="text" name="email">
                 <div class="error" id="emailErr"></div>
             </div>
+            <div class="row">
+                <label>Phone Number</label>
+                <input type="text" name="phone">
+                <div class="error" id="phoneErr"></div>
+            </div>
+            <div>
+                <label>Profession</label>
+                <div>
+                    <input type="radio" name="profession" value="Self Employed">Self Employed</div>
+                    <input type="radio" name="profession" value="Salaried">Salaried</div>
+                </div>
+                <div class="error" id="professionErr"></div>
+            </div>
+            <div class="row">
+                <label>Seclect Country</label>
+                <select name="country">
+                    <option>Select</option>
+                    <option>India</option>
+                    <option>USA</option>
+                    <option>UK</option>
+                </select>
+                <div class="error" id="countryErr"></div>
+            </div>
             <button type="submit" id="click">Submit</button>
         </form>
         <script src="validate.js" type="text/javascript"></script>
