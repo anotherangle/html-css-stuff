@@ -1,21 +1,26 @@
 <html>
     <head>
         <title>React in HTMl</title>
-        
     </head>
     <body>
         <div id="root"></div>
         <div id="root2"></div>
         <div id="root3"></div>
+        <div id="root4"></div>
+        <div id="root5"></div>
         <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
         <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
         <script type="text/babel">
+            function Message(){
+                return <h1>Hello World from Function</h1>
+            }
             class Hello2 extends React.Component{
                 render(){
                     return <h1>Hello World</h1>
                 }
             }
+            const result = <h1>React is {5 + 5} times better with JSX</h1>;
             const data = (
                 <table>
                     <tr>
@@ -25,11 +30,12 @@
                         <td>Chetan</td>
                     </tr>
                 </table>
-
             )
             ReactDOM.render(<h1>Hello </h1>, document.getElementById('root'))
             ReactDOM.render(<Hello2 />,document.getElementById('root2'))
             ReactDOM.render(data,document.getElementById('root3'))
+            ReactDOM.render(result,document.getElementById('root4'))
+            ReactDOM.render(<Message />,document.getElementById('root5'))
         </script>
     </body>
 </html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>React in HTMl</title>
+    </head>
+    <body>
+        <div id="msg"></div>
+        <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <script type="text/babel">
+            class Hello extends React.Component{
+            
+                render(){
+                   return  <h1>{this.props.name} </h1>;
+                } 
+            } 
+            class Users extends React.Component{
+                render(){
+                    const msg = "Chetan";
+                    return(<div>Users registered so far are <Hello name={msg} /> </div> );
+                    
+                }
+            }
+           
+            
+            ReactDOM.render(<Users />, document.getElementById('msg'));
+        </script>
+    </body>
+</html>
