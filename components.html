@@ -16,8 +16,16 @@
                         city: "Shimla"
                     };
                 }
+                changeCity = () => {
+                    this.setState({city: "Chandigarh"});
+                }
                 render(){
-                   return  <h1>Hello {this.state.name} from {this.state.city}</h1>;
+                   return  (
+                       <div>
+                       <h1>Hello {this.state.name} from {this.state.city}</h1>
+                       <button type="button" onClick={this.changeCity}>Click here</button>
+                       </div>
+                       );
                 } 
             } 
             
