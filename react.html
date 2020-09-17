@@ -5,12 +5,31 @@
     </head>
     <body>
         <div id="root"></div>
+        <div id="root2"></div>
+        <div id="root3"></div>
         <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
         <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-        <script>
-            
-            ReactDOM.render("<p>hello</p>", document.getElementById('root'));
+        <script type="text/babel">
+            class Hello2 extends React.Component{
+                render(){
+                    return <h1>Hello World</h1>
+                }
+            }
+            const data = (
+                <table>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                    <tr>
+                        <td>Chetan</td>
+                    </tr>
+                </table>
+
+            )
+            ReactDOM.render(<h1>Hello </h1>, document.getElementById('root'))
+            ReactDOM.render(<Hello2 />,document.getElementById('root2'))
+            ReactDOM.render(data,document.getElementById('root3'))
         </script>
     </body>
 </html>
